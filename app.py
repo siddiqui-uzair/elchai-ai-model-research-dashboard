@@ -13,7 +13,7 @@ st.set_page_config(
 st.title(APP_TITLE)
 
 st.write(
-    "A beginner research dashboard comparing open-source AI models for "
+    "A beginner research dashboard comparing open source AI models for "
     "Elchai Group business workflow use cases."
 )
 
@@ -23,28 +23,28 @@ model_data = [
     {
         "Model": "Qwen",
         "Best For": "Internal assistants, document tasks, local testing, workflow support",
-        "Strength": "Open-source model family, practical for business AI workflows",
+        "Strength": "Open source model family, practical for business AI workflows",
         "Main Risk": "Needs testing for accuracy, privacy, and integration reliability",
         "Recommendation": "Test first"
     },
     {
         "Model": "Kimi",
-        "Best For": "Long-context research, coding, agent-style tasks",
-        "Strength": "Strong long-context and agentic workflow potential",
+        "Best For": "Long context research, coding, agent style tasks",
+        "Strength": "Strong long context and agentic workflow potential",
         "Main Risk": "Access, reliability, and claims need practical validation",
         "Recommendation": "Research further"
     },
     {
         "Model": "MiniMax",
         "Best For": "Conversational AI, content generation, multimodal use cases",
-        "Strength": "Useful for customer-facing and creative AI workflows",
+        "Strength": "Useful for customer facing and creative AI workflows",
         "Main Risk": "Business fit and privacy controls need testing",
         "Recommendation": "Monitor"
     },
     {
         "Model": "GLM",
         "Best For": "General AI assistant, research, coding support",
-        "Strength": "Open model ecosystem with general-purpose capabilities",
+        "Strength": "Open model ecosystem with general purpose capabilities",
         "Main Risk": "Requires evaluation against Elchai workflow needs",
         "Recommendation": "Compare later"
     }
@@ -76,17 +76,17 @@ recommendations = {
     },
     "Project coordination support": {
         "Model": "Qwen",
-        "Why": "Can help convert project notes into summaries, action points, and follow-up items.",
+        "Why": "Can help convert project notes into summaries, action points, and follow up items.",
         "Departments": "Operations, Product, Strategy"
     },
     "Document summarization": {
         "Model": "Qwen",
-        "Why": "Suitable for testing document-based workflows in a controlled internal environment.",
+        "Why": "Suitable for testing document based workflows in a controlled internal environment.",
         "Departments": "Operations, Finance, Strategy"
     },
     "Coding and product support": {
         "Model": "Kimi",
-        "Why": "Promising for longer coding and agent-style tasks, but should be tested carefully first.",
+        "Why": "Promising for longer coding and agent style tasks, but should be tested carefully first.",
         "Departments": "Engineering, Product, IT/Infrastructure"
     },
     "Local/private AI assistant": {
@@ -123,7 +123,7 @@ risks = [
     "AI output may be inaccurate or incomplete",
     "Local hardware cost may be high for larger models",
     "Integration with existing workflows may take time",
-    "Human review is required before using AI-generated outputs"
+    "Human review is required before using AI generated outputs"
 ]
 
 for risk in risks:
@@ -132,7 +132,7 @@ for risk in risks:
 st.header("Final Recommendation")
 
 st.success(
-    "Recommendation: Test Qwen first in a limited internal proof-of-concept using "
-    "non-confidential data. Avoid production use until privacy, security, accuracy, "
+    "Recommendation: Test Qwen first in a limited internal proof of concept using "
+    "non confidential data. Avoid production use until privacy, security, accuracy, "
     "integration, and reliability risks are reviewed."
 )
