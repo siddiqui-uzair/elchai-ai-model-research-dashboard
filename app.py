@@ -54,3 +54,63 @@ df = pd.DataFrame(model_data)
 
 st.header("Model Comparison")
 st.dataframe(df, use_container_width=True)
+
+st.header("Use Case Recommendation")
+
+use_case = st.selectbox(
+    "Select an Elchai business use case",
+    [
+        "Internal research assistant",
+        "Project coordination support",
+        "Document summarization",
+        "Coding and product support",
+        "Local/private AI assistant"
+    ]
+)
+
+recommendations = {
+    "Internal research assistant": {
+        "Model": "Qwen",
+        "Why": "Good starting point for summarizing research notes and supporting internal knowledge workflows.",
+        "Departments": "Strategy, Product, Operations"
+    },
+    "Project coordination support": {
+        "Model": "Qwen",
+        "Why": "Can help convert project notes into summaries, action points, and follow-up items.",
+        "Departments": "Operations, Product, Strategy"
+    },
+    "Document summarization": {
+        "Model": "Qwen",
+        "Why": "Suitable for testing document-based workflows in a controlled internal environment.",
+        "Departments": "Operations, Finance, Strategy"
+    },
+    "Coding and product support": {
+        "Model": "Kimi",
+        "Why": "Promising for longer coding and agent-style tasks, but should be tested carefully first.",
+        "Departments": "Engineering, Product, IT/Infrastructure"
+    },
+    "Local/private AI assistant": {
+        "Model": "Qwen",
+        "Why": "More suitable for local or controlled testing compared to fully external tools.",
+        "Departments": "IT/Infrastructure, Operations"
+    }
+}
+
+selected = recommendations[use_case]
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric("Recommended Model", selected["Model"])
+
+with col2:
+    st.metric("Testing Stage", "Limited Pilot")
+
+with col3:
+    st.metric("Data Type", "Non-confidential")
+
+st.subheader("Why this model fits")
+st.write(selected["Why"])
+
+st.subheader("Departments that may benefit")
+st.write(selected["Departments"])
