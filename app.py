@@ -114,3 +114,25 @@ st.write(selected["Why"])
 
 st.subheader("Departments that may benefit")
 st.write(selected["Departments"])
+
+st.header("Risks and Limitations")
+
+risks = [
+    "Privacy risk if confidential company or client data is used",
+    "Security review needed before connecting to internal systems",
+    "AI output may be inaccurate or incomplete",
+    "Local hardware cost may be high for larger models",
+    "Integration with existing workflows may take time",
+    "Human review is required before using AI-generated outputs"
+]
+
+for risk in risks:
+    st.write(f"- {risk}")
+
+st.header("Final Recommendation")
+
+st.success(
+    "Recommendation: Test Qwen first in a limited internal proof-of-concept using "
+    "non-confidential data. Avoid production use until privacy, security, accuracy, "
+    "integration, and reliability risks are reviewed."
+)
