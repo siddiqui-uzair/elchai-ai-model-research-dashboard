@@ -34,12 +34,13 @@ Install the required packages:
 pip install -r requirements.txt
 streamlit run app.py
 
-Final Recommendation
+```
+## Final Recommendation
 
 Test Qwen first in a limited internal proof of concept using non confidential data.
 
 It should not be used in production or with sensitive client/company data until privacy, security, accuracy, integration, and reliability risks are reviewed.
 
-Note
+## Note
 
 This is a beginner research dashboard and not a production AI system. It is intended as a small practical output for research, and comparison etc.
